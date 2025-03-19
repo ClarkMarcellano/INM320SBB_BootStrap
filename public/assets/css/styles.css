@@ -1,0 +1,113 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #F4F7FA;
+  color: #4B506D;
+}
+
+.sidebar {
+  height: 100vh;
+  background-color: #363740;
+  padding-top: 20px;
+}
+.sidebar .nav-link {
+  color: rgb(153.0338983051, 154.6271186441, 168.9661016949);
+  padding: 10px 20px;
+  transition: all 0.2s;
+}
+.sidebar .nav-link i {
+  color: #9FA2B4;
+  margin-right: 10px;
+  transition: color 0.2s;
+}
+.sidebar .nav-link.active, .sidebar .nav-link:hover {
+  color: #FFFFFF;
+  background-color: rgb(49.3322033898, 50.2457627119, 58.4677966102);
+  border-left: 4px solid #DDE2FF;
+}
+.sidebar .nav-link.active i, .sidebar .nav-link:hover i {
+  color: #DDE2FF;
+}
+
+.main-content {
+  padding: 20px;
+}
+.main-content header {
+  font-size: 16px;
+  font-weight: 600;
+}
+.main-content header img {
+  width: 35px;
+  height: 35px;
+}
+
+.stat-card {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #9FA2B4;
+  margin-bottom: 20px;
+}
+.stat-card strong {
+  display: block;
+  font-size: 24px;
+  color: rgb(33.4239130435, 35.652173913, 48.5760869565);
+  margin-top: 10px;
+}
+.stat-card.highlight {
+  border: 2px solid #3751FF;
+  color: #3751FF;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid rgb(212.9402173913, 214.8695652174, 226.0597826087);
+  padding: 10px 0;
+  color: rgb(33.4239130435, 35.652173913, 48.5760869565);
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+.list-group-item span {
+  color: #9FA2B4;
+  font-weight: bold;
+}
+.list-group-item input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.badge {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+}
+.badge.bg-warning {
+  background-color: #FEC400 !important;
+  color: #FFFFFF;
+}
+.badge.bg-success {
+  background-color: #29CC97 !important;
+  color: #FFFFFF;
+}
+.badge.bg-secondary {
+  background-color: rgb(212.9402173913, 214.8695652174, 226.0597826087) !important;
+  color: #9FA2B4;
+}
+
+a {
+  color: #3751FF;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=styles.css.map */

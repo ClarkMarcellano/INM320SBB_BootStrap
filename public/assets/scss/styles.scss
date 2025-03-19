@@ -1,0 +1,145 @@
+// Variables
+$bg-body: #F4F7FA;
+$sidebar-bg: #363740;
+$text-color: #4B506D;
+$highlight-color: #3751FF;
+$icon-color: #9FA2B4;
+$icon-hover-color: #DDE2FF;
+$border-radius: 8px;
+$shadow-card: rgba(0, 0, 0, 0.1);
+
+// Body
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: $bg-body;
+  color: $text-color;
+}
+
+// Sidebar
+.sidebar {
+  height: 100vh;
+  background-color: $sidebar-bg;
+  padding-top: 20px;
+
+  .nav-link {
+    color: lighten($sidebar-bg, 40%);
+    padding: 10px 20px;
+    transition: all 0.2s;
+
+    i {
+      color: $icon-color;
+      margin-right: 10px;
+      transition: color 0.2s;
+    }
+
+    &.active,
+    &:hover {
+      color: #FFFFFF;
+      background-color: darken($sidebar-bg, 2%);
+      border-left: 4px solid $icon-hover-color;
+
+      i {
+        color: $icon-hover-color;
+      }
+    }
+  }
+}
+
+// Main Content
+.main-content {
+  padding: 20px;
+
+  header {
+    font-size: 16px;
+    font-weight: 600;
+
+    img {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+
+// Stat Cards
+.stat-card {
+  background-color: #FFFFFF;
+  border-radius: $border-radius;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $icon-color;
+  margin-bottom: 20px;
+
+  strong {
+    display: block;
+    font-size: 24px;
+    color: darken($text-color, 20%);
+    margin-top: 10px;
+  }
+
+  &.highlight {
+    border: 2px solid $highlight-color;
+    color: $highlight-color;
+  }
+}
+
+// Cards General
+.card {
+  border-radius: $border-radius;
+  box-shadow: 0 2px 5px $shadow-card;
+  border: none;
+}
+
+// Lists
+.list-group-item {
+  border: none;
+  border-bottom: 1px solid lighten($text-color, 50%);
+  padding: 10px 0;
+  color: darken($text-color, 20%);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  span {
+    color: $icon-color;
+    font-weight: bold;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+}
+
+// Badges
+.badge {
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+
+  &.bg-warning {
+    background-color: #FEC400 !important;
+    color: #FFFFFF;
+  }
+
+  &.bg-success {
+    background-color: #29CC97 !important;
+    color: #FFFFFF;
+  }
+
+  &.bg-secondary {
+    background-color: lighten($text-color, 50%) !important;
+    color: $icon-color;
+  }
+}
+
+// Links
+a {
+  color: $highlight-color;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,7 +1,6 @@
 {
   "name": "inm320sbb_bootstrap",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "lite-server --baseDir=\"public\"",
@@ -12,5 +11,14 @@
   "license": "ISC",
   "devDependencies": {
     "lite-server": "^2.6.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClarkMarcellano/INM320SBB_BootStrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ClarkMarcellano/INM320SBB_BootStrap/issues"
+  },
+  "homepage": "https://github.com/ClarkMarcellano/INM320SBB_BootStrap#readme",
+  "description": ""
 }

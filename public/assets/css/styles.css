@@ -1,13 +1,33 @@
-body {
+html, body {
   font-family: "Inter", sans-serif;
   background-color: #F4F7FA;
   color: #4B506D;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+}
+
+.row {
+  flex-grow: 1;
+  display: flex;
 }
 
 .sidebar {
   height: 100vh;
+  width: 250px;
   background-color: #363740;
   padding-top: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .sidebar .nav-link {
   color: rgb(153.0338983051, 154.6271186441, 168.9661016949);
@@ -29,6 +49,7 @@ body {
 }
 
 .main-content {
+  margin-left: 317px;
   padding: 20px;
 }
 .main-content header {

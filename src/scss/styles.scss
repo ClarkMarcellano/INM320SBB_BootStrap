@@ -9,17 +9,40 @@ $border-radius: 8px;
 $shadow-card: rgba(0, 0, 0, 0.1);
 
 // Body
-body {
+html, body {
   font-family: 'Inter', sans-serif;
   background-color: $bg-body;
   color: $text-color;
+
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 // Sidebar
+
+.container-fluid {
+  min-height: 100vh;
+  display: flex;
+}
+
+.row {
+  flex-grow: 1;
+  display: flex;
+}
+
 .sidebar {
   height: 100vh;
+  width: 250px;
   background-color: $sidebar-bg;
   padding-top: 20px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   .nav-link {
     color: lighten($sidebar-bg, 40%);
@@ -47,6 +70,7 @@ body {
 
 // Main Content
 .main-content {
+  margin-left: 317px;
   padding: 20px;
 
   header {

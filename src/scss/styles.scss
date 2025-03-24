@@ -1,171 +1,251 @@
 // Variables
-$bg-body: #F4F7FA;
+$bg-body: #f4f7fa;
 $sidebar-bg: #363740;
-$text-color: #4B506D;
-$highlight-color: #3751FF;
-$icon-color: #9FA2B4;
-$icon-hover-color: #DDE2FF;
+$text-color: #4b506d;
+$highlight-color: #3751ff;
+$icon-color: #9fa2b4;
+$icon-hover-color: #dde2ff;
 $border-radius: 8px;
 $shadow-card: rgba(0, 0, 0, 0.1);
 
-// Body
-html, body {
-  font-family: 'Inter', sans-serif;
+// Font Import
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
+
+// Base Styles
+html,
+body {
+  font-family: "Mulish", sans-serif;
   background-color: $bg-body;
   color: $text-color;
-
   height: 100%;
   margin: 0;
-  padding: 0;
+}
+
+// Dashboard Container
+.dashboard {
+  display: flex;
 }
 
 // Sidebar
-
-.container-fluid {
-  min-height: 100vh;
-  display: flex;
-}
-
-.row {
-  flex-grow: 1;
-  display: flex;
-}
-
 .sidebar {
-  height: 100vh;
   width: 255px;
   background-color: $sidebar-bg;
-  padding-top: 20px;
-
+  color: lighten($sidebar-bg, 40%);
   position: fixed;
   top: 0;
   left: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
-  .nav-link {
-    color: lighten($sidebar-bg, 40%);
-    padding: 10px 20px;
-    transition: all 0.2s;
-    height: 56px;
+  .brand-link {
+    color: $text-color;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 45px 40px 25px;
 
-    i {
-      color: $icon-color;
+    img {
+      width: 32px;
+      height: 32px;
       margin-right: 10px;
-      transition: color 0.2s;
     }
 
-    &.active,
-    &:hover {
-      color: #FFFFFF;
-      background-color: lighten($sidebar-bg, 8%);
-      border-left: 4px solid $icon-hover-color;
-      // border: red dotted;
+    span {
+      font-size: 19px;
+      font-weight: 700;
+    }
+  }
+
+  .menu {
+    list-style: none;
+    padding: 0;
+
+    .menu-item {
+      padding: 20px 35px;
+      color: inherit;
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
 
       i {
-        color: $icon-hover-color;
+        margin-right: 10px;
+        color: $icon-color;
+      }
+
+      &.active,
+      &:hover {
+        background-color: lighten($sidebar-bg, 8%);
+        color: #fff;
+        border-left: 4px solid $icon-hover-color;
+
+        i {
+          color: $icon-hover-color;
+        }
       }
     }
   }
 }
 
 // Main Content
-.main-content {
-  margin-left: 317px;
-  padding: 20px;
+.content {
+  flex-grow: 1;
+  margin-left: 255px;
+  padding: 50px 30px 30px;
 
-  header {
-    font-size: 16px;
-    font-weight: 600;
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
 
-    img {
-      width: 35px;
-      height: 35px;
+    h2 {
+      font-family: "Mulish", sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+    }
+
+    .user-actions {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin: 0 10px;
+        cursor: pointer;
+      }
+
+      .user-avatar {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+      }
     }
   }
-}
 
-// Stat Cards
-.stat-card {
-  background-color: #FFFFFF;
-  border-radius: $border-radius;
-  padding: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  color: $icon-color;
-  margin-bottom: 20px;
+  .stats {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
 
-  strong {
-    display: block;
-    font-size: 24px;
-    color: darken($text-color, 20%);
-    margin-top: 10px;
+    .stat {
+      background-color: #fff;
+      width: 258px;
+      height: 134px;
+      padding: 15px;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 5px $shadow-card;
+      text-align: center;
+
+      h4 {
+        font-size: 19px;
+        font-weight: 700;
+        color: $icon-color;
+      }
+
+      strong {
+        display: block;
+        font-size: 40px;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      &.highlight {
+        border: 2px solid $highlight-color;
+        color: $highlight-color;
+      }
+    }
   }
 
-  &.highlight {
-    border: 2px solid $highlight-color;
-    color: $highlight-color;
-  }
-}
+  .chart-section {
+    margin-bottom: 20px;
 
-// Cards General
-.card {
-  border-radius: $border-radius;
-  box-shadow: 0 2px 5px $shadow-card;
-  border: none;
-}
-
-// Lists
-.list-group-item {
-  border: none;
-  border-bottom: 1px solid lighten($text-color, 50%);
-  padding: 10px 0;
-  color: darken($text-color, 20%);
-
-  &:last-child {
-    border-bottom: none;
+    img {
+      width: 100%;
+      border-radius: $border-radius;
+      box-shadow: 0 2px 5px $shadow-card;
+    }
   }
 
-  span {
-    color: $icon-color;
-    font-weight: bold;
-  }
+  .details {
+    display: flex;
+    gap: 15px;
 
-  input[type="checkbox"] {
-    margin-right: 10px;
-  }
-}
+    .card {
+      flex: 1;
+      padding: 15px;
+      box-shadow: 0 2px 5px $shadow-card;
+      border-radius: $border-radius;
 
-// Badges
-.badge {
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 10px;
-  font-weight: 600;
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // margin-bottom: 10px;
+        padding: 12px 12px 10px;
 
-  &.bg-warning {
-    background-color: #FEC400 !important;
-    color: #FFFFFF;
-  }
+        h3 {
+          font-size: 19px;
+          font-weight: 700;
+          padding: 12px 20px 10px;
+        }
 
-  &.bg-success {
-    background-color: #29CC97 !important;
-    color: #FFFFFF;
-  }
+        a {
+          font-size: 12px;
+          padding-right: 30px;
+        }
+      }
 
-  &.bg-secondary {
-    background-color: lighten($text-color, 50%) !important;
-    color: $icon-color;
-  }
-}
+      ul {
+        list-style: none;
+        // padding: 0;
 
-// Links
-a {
-  color: $highlight-color;
-  text-decoration: none;
+        li {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 15px 0;
+          border-bottom: 1px solid lighten($text-color, 50%);
+          font-size: 12px;
+          font-weight: 600;
 
-  &:hover {
-    text-decoration: underline;
+          &:last-child {
+            border-bottom: none;
+          }
+
+          span {
+            font-size: 12px;
+            font-weight: 600;
+            color: $icon-color;
+            padding-right: 40px;
+          }
+
+          input[type="checkbox"] {
+            margin-right: 10px;
+          }
+        }
+
+        .badge {
+          border-radius: 10px;
+          font-size: 10px;
+          padding: 5px 8px;
+          color: #fff;
+
+          &.urgent {
+            background-color: #fec400;
+          }
+          &.new {
+            background-color: #29cc97;
+          }
+          &.default {
+            background-color: lighten($text-color, 50%);
+          }
+        }
+      }
+    }
   }
 }

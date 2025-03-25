@@ -24,17 +24,6 @@ body {
 .dashboard {
   display: flex;
 
-  .brand-link {
-    color: $text-color;
-    font-weight: bold;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-    padding: 45px 40px 25px;
-    border: red dotted;
-  }  
-
   nav {
     background-color: $sidebar-bg !important;
     color: #fff;
@@ -85,10 +74,11 @@ body {
 
       .card-subtitle {
         color: $icon-color;
+        font-weight: 700;
       }
 
       &.border-start {
-        border-left-color: $highlight-color !important;
+        border: $highlight-color solid !important;
       }
     }
 

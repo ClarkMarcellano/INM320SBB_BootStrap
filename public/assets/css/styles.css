@@ -11,16 +11,6 @@ body {
 .dashboard {
   display: flex;
 }
-.dashboard .brand-link {
-  color: #4b506d;
-  font-weight: bold;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 45px 40px 25px;
-  border: red dotted;
-}
 .dashboard nav {
   background-color: #363740 !important;
   color: #fff;
@@ -64,9 +54,10 @@ body {
 }
 .dashboard main .card .card-subtitle {
   color: #9fa2b4;
+  font-weight: 700;
 }
 .dashboard main .card.border-start {
-  border-left-color: #3751ff !important;
+  border: #3751ff solid !important;
 }
 .dashboard main .card-body h5 {
   font-weight: 700;

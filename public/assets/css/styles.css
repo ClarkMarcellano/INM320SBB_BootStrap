@@ -30,17 +30,29 @@ body {
 }
 .dashboard nav .navbar-brand {
   font-weight: 700;
+  font-weight: 700;
+  font-size: 1rem;
+  padding-left: 32px;
+  display: flex;
+  align-items: center;
+}
+.dashboard nav img {
+  margin-right: 8px;
 }
 .dashboard nav .nav-link {
   color: #9fa2b4;
-  transition: all 0.3s;
-  padding: 18px 50px;
+  font-size: 0.9rem;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
 }
 .dashboard nav .nav-link:hover, .dashboard nav .nav-link.active {
   background-color: rgb(65.6694915254, 66.8855932203, 77.8305084746);
   color: #dde2ff;
 }
 .dashboard nav .nav-link i {
+  font-size: 1rem;
+  margin-right: 12px;
   margin-right: 8px;
   margin-left: 10px;
 }
@@ -49,13 +61,13 @@ body {
   margin-left: 255px;
   padding: 50px 30px 30px;
 }
+.dashboard main .container {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+}
 .dashboard main h2 {
   font-weight: 700;
-}
-.dashboard main .card {
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  border: none;
 }
 .dashboard main .card .card-subtitle {
   color: #9fa2b4;

@@ -6,7 +6,6 @@ $highlight-color: #3751ff;
 $icon-color: #9fa2b4;
 $icon-hover-color: #dde2ff;
 $border-radius: 8px;
-$border-top: #DFE0EB;
 $shadow-card: rgba(0, 0, 0, 0.1);
 
 // Font Import
@@ -46,12 +45,23 @@ body {
 
     .navbar-brand {
       font-weight: 700;
+      font-weight: 700;
+      font-size: 1rem;
+      padding-left: 32px;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 8px;
     }
 
     .nav-link {
       color: $icon-color;
-      transition: all 0.3s;
-      padding: 18px 50px;
+      font-size: 0.9rem;
+      padding: 12px 32px;
+      display: flex;
+      align-items: center;
 
       &:hover, &.active {
         background-color: lighten($sidebar-bg, 5%);
@@ -59,6 +69,8 @@ body {
       }
 
       i {
+        font-size: 1rem;
+        margin-right: 12px;
         margin-right: 8px;
         margin-left: 10px;
       }
@@ -71,14 +83,20 @@ body {
     margin-left: 255px;
     padding: 50px 30px 30px;
 
+    .container {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+    }
+
     h2 {
       font-weight: 700;
     }
 
     .card {
-      border-radius: $border-radius;
-      box-shadow: 0 2px 4px $shadow-card;
-      border: none;
+      // border-radius: $border-radius;
+      // box-shadow: 0 2px 4px $shadow-card;
+      // border: none;
 
       .card-subtitle {
         color: $icon-color;

@@ -1,8 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap");
-html, body {
+html,
+body {
   font-family: "Mulish", sans-serif;
-  background-color: #F4F7FA;
-  color: #4B506D;
+  background-color: #f4f7fa;
+  color: #4b506d;
   height: 100%;
   margin: 0;
 }
@@ -10,192 +11,78 @@ html, body {
 .dashboard {
   display: flex;
 }
-
-.sidebar {
-  width: 255px;
-  background-color: #363740;
-  color: rgb(153.0338983051, 154.6271186441, 168.9661016949);
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.dashboard nav {
+  background-color: #363740 !important;
+  color: #fff;
 }
-.sidebar .brand-link {
-  color: #4B506D;
-  font-weight: bold;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 45px 40px 25px;
-}
-.sidebar .brand-link img {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-}
-.sidebar .brand-link span {
-  font-size: 19px;
+.dashboard nav .navbar-brand {
   font-weight: 700;
 }
-.sidebar .menu {
-  list-style: none;
-  padding: 0;
+.dashboard nav .nav-link {
+  color: #9fa2b4;
+  transition: all 0.3s;
 }
-.sidebar .menu .menu-item {
-  padding: 20px 35px;
-  color: inherit;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
+.dashboard nav .nav-link:hover, .dashboard nav .nav-link.active {
+  background-color: rgb(42.3305084746, 43.1144067797, 50.1694915254);
+  color: #dde2ff;
 }
-.sidebar .menu .menu-item i {
-  margin-right: 10px;
-  color: #9FA2B4;
+.dashboard nav .nav-link i {
+  margin-right: 8px;
 }
-.sidebar .menu .menu-item.active, .sidebar .menu .menu-item:hover {
-  background-color: rgb(72.6711864407, 74.0169491525, 86.1288135593);
-  color: #FFF;
-  border-left: 4px solid #DDE2FF;
+.dashboard main {
+  padding: 2rem;
 }
-.sidebar .menu .menu-item.active i, .sidebar .menu .menu-item:hover i {
-  color: #DDE2FF;
-}
-
-.content {
-  flex-grow: 1;
-  margin-left: 255px;
-  padding: 50px 30px 30px;
-}
-.content .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
-}
-.content .header h2 {
-  font-family: "Mulish", sans-serif;
-  font-size: 24px;
+.dashboard main h2 {
   font-weight: 700;
 }
-.content .header .user-actions {
-  display: flex;
-  align-items: center;
-}
-.content .header .user-actions i {
-  margin: 0 10px;
-  cursor: pointer;
-}
-.content .header .user-actions .user-avatar {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-}
-.content .stats {
-  display: flex;
-  justify-content: space-between;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-.content .stats .stat {
-  background-color: #FFF;
-  width: 258px;
-  height: 134px;
-  padding: 15px;
+.dashboard main .card {
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: none;
 }
-.content .stats .stat h4 {
-  font-size: 19px;
+.dashboard main .card .card-subtitle {
+  color: #9fa2b4;
+}
+.dashboard main .card.border-start {
+  border-left-color: #3751ff !important;
+}
+.dashboard main .card-body h5 {
   font-weight: 700;
-  color: #9FA2B4;
+  margin-bottom: 1rem;
 }
-.content .stats .stat strong {
-  display: block;
-  font-size: 40px;
-  font-weight: 700;
-  margin-top: 5px;
+.dashboard main .list-group-item {
+  border: none;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgb(182.7282608696, 186.0434782609, 205.2717391304);
 }
-.content .stats .stat.highlight {
-  border: 2px solid #3751FF;
-  color: #3751FF;
-}
-.content .chart-section {
-  margin-bottom: 20px;
-}
-.content .chart-section img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.content .details {
-  display: flex;
-  gap: 15px;
-}
-.content .details .card {
-  flex: 1;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-}
-.content .details .card header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px 12px 10px;
-}
-.content .details .card header h3 {
-  font-size: 19px;
-  font-weight: 700;
-  padding: 12px 20px 10px;
-}
-.content .details .card header a {
-  font-size: 12px;
-  padding-right: 30px;
-}
-.content .details .card ul {
-  list-style: none;
-}
-.content .details .card ul li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px solid rgb(212.9402173913, 214.8695652174, 226.0597826087);
-  font-size: 12px;
-  font-weight: 600;
-}
-.content .details .card ul li:last-child {
+.dashboard main .list-group-item:last-child {
   border-bottom: none;
 }
-.content .details .card ul li span {
-  font-size: 12px;
-  font-weight: 600;
-  color: #9FA2B4;
-  padding-right: 40px;
+.dashboard main .badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
 }
-.content .details .card ul li input[type=checkbox] {
-  margin-right: 10px;
+.dashboard main .badge.bg-warning {
+  background-color: #fec400;
+  color: #fff;
 }
-.content .details .card ul .badge {
-  border-radius: 10px;
-  font-size: 10px;
-  padding: 5px 8px;
-  color: #FFF;
+.dashboard main .badge.bg-success {
+  background-color: #29cc97;
+  color: #fff;
 }
-.content .details .card ul .badge.urgent {
-  background-color: #FEC400;
+.dashboard main .badge.bg-secondary {
+  background-color: #9fa2b4;
+  color: #fff;
 }
-.content .details .card ul .badge.new {
-  background-color: #29CC97;
+.dashboard main .form-control {
+  border-radius: 8px;
+  box-shadow: none;
+  border: 1px solid rgb(182.7282608696, 186.0434782609, 205.2717391304);
 }
-.content .details .card ul .badge.default {
-  background-color: rgb(212.9402173913, 214.8695652174, 226.0597826087);
+.dashboard main .form-control:focus {
+  border-color: #3751ff;
 }
 
 /*# sourceMappingURL=styles.css.map */

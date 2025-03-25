@@ -24,6 +24,17 @@ body {
 .dashboard {
   display: flex;
 
+  .brand-link {
+    color: $text-color;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 45px 40px 25px;
+    border: red dotted;
+  }  
+
   nav {
     background-color: $sidebar-bg !important;
     color: #fff;
@@ -43,6 +54,7 @@ body {
     .nav-link {
       color: $icon-color;
       transition: all 0.3s;
+      padding: 18px 50px;
 
       &:hover, &.active {
         background-color: lighten($sidebar-bg, 5%);
@@ -51,6 +63,7 @@ body {
 
       i {
         margin-right: 8px;
+        margin-left: 10px;
       }
     }
   }

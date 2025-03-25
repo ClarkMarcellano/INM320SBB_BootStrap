@@ -27,6 +27,14 @@ body {
   nav {
     background-color: $sidebar-bg !important;
     color: #fff;
+    width: 255px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .navbar-brand {
       font-weight: 700;
@@ -37,7 +45,7 @@ body {
       transition: all 0.3s;
 
       &:hover, &.active {
-        background-color: darken($sidebar-bg, 5%);
+        background-color: lighten($sidebar-bg, 5%);
         color: $icon-hover-color;
       }
 
@@ -48,7 +56,10 @@ body {
   }
 
   main {
-    padding: 2rem;
+    // padding: 2rem;
+    flex-grow: 1;
+    margin-left: 255px;
+    padding: 50px 30px 30px;
 
     h2 {
       font-weight: 700;

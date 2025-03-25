@@ -14,6 +14,14 @@ body {
 .dashboard nav {
   background-color: #363740 !important;
   color: #fff;
+  width: 255px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .dashboard nav .navbar-brand {
   font-weight: 700;
@@ -23,14 +31,16 @@ body {
   transition: all 0.3s;
 }
 .dashboard nav .nav-link:hover, .dashboard nav .nav-link.active {
-  background-color: rgb(42.3305084746, 43.1144067797, 50.1694915254);
+  background-color: rgb(65.6694915254, 66.8855932203, 77.8305084746);
   color: #dde2ff;
 }
 .dashboard nav .nav-link i {
   margin-right: 8px;
 }
 .dashboard main {
-  padding: 2rem;
+  flex-grow: 1;
+  margin-left: 255px;
+  padding: 50px 30px 30px;
 }
 .dashboard main h2 {
   font-weight: 700;

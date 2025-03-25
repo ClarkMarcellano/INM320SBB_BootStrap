@@ -13,7 +13,7 @@ body {
 }
 .dashboard nav {
   background-color: #363740 !important;
-  color: #fff;
+  color: #4b506d;
   width: 255px;
   position: fixed;
   top: 0;
@@ -22,6 +22,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+.dashboard nav ul:nth-of-type(2) {
+  border-top: 1px solid #4b506d;
+  margin-top: 1rem;
+  padding-top: 1rem;
 }
 .dashboard nav .navbar-brand {
   font-weight: 700;

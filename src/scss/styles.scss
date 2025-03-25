@@ -6,6 +6,7 @@ $highlight-color: #3751ff;
 $icon-color: #9fa2b4;
 $icon-hover-color: #dde2ff;
 $border-radius: 8px;
+$border-top: #DFE0EB;
 $shadow-card: rgba(0, 0, 0, 0.1);
 
 // Font Import
@@ -26,7 +27,7 @@ body {
 
   nav {
     background-color: $sidebar-bg !important;
-    color: #fff;
+    color: $text-color;
     width: 255px;
     position: fixed;
     top: 0;
@@ -35,6 +36,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    ul:nth-of-type(2) {
+      border-top: 1px solid ($text-color);
+      margin-top: 1rem;
+      padding-top: 1rem;
+    }
+  
 
     .navbar-brand {
       font-weight: 700;

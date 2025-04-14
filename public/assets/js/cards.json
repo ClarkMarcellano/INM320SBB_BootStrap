@@ -1,0 +1,14 @@
+[
+    {
+        "title": "New Tickets",
+        "value": "128",
+        "subtitle": "Tickets created today",
+        "borderColor": "primary"
+    },
+    {
+        "title": "Closed Tickets",
+        "value": "98",
+        "subtitle": "Tickets closed today",
+        "borderColor": "success"
+    }
+]
